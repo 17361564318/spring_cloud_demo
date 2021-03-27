@@ -7,11 +7,11 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/17361564318/cloud_config.git
-          #搜索目录
+          uri: https://github.com/17361564318/cloud-config-center.git
+          #####搜索目录
           search-paths:
-            - cloud_config
-      #读取的分支
+            - cloud-config-center
+      #####读取的分支
       label: main
 eureka:
   client:
