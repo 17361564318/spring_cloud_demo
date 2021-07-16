@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.text.SimpleDateFormat;
 
 /**
  * @author fhn
@@ -24,6 +25,7 @@ public class PaymentController {
     @Value("${server.port}")
     private String serverPort;
 
+
     @GetMapping("/payment/hystrix/ok/{id}")
     public String paymentinfo_ok(@PathVariable("id") Integer id) {
         String result = service.paymentinfo_ok(id);
@@ -38,7 +40,7 @@ public class PaymentController {
         return result;
     }
 
-    //    ==服务熔断
+    //服务熔断
     @GetMapping("/payment/circuit/{id}")
     public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
         String result = service.paymentCircuitBreaker(id);

@@ -50,7 +50,6 @@ public class PaymentServiceImpl implements IPaymentService {
     }
     )
     public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
-
         if (id < 0) {
             throw new RuntimeException("id不能为负数");
         }
