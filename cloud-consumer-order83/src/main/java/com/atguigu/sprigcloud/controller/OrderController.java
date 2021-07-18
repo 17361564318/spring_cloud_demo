@@ -25,7 +25,7 @@ public class OrderController {
 
     @GetMapping("/consumer/payment/nacos/{id}")
     public String getServerPort(@PathVariable("id") Integer id) {
-        return restTemplate.getForObject(urlPath + "/payment/nacos" + id, String.class);
+        return restTemplate.getForObject(urlPath + "/payment/nacos/" + id, String.class);
     }
 
 }

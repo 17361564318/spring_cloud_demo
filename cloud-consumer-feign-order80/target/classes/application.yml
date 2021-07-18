@@ -1,7 +1,5 @@
 server:
   port: 80
-
-
 eureka:
   client:
     #  表示是否将自己注册进eurekaServer默认为true
